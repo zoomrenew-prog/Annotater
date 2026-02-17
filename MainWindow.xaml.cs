@@ -368,6 +368,9 @@ public partial class MainWindow : Window
         _mediaPlayer.SetPause(true);
         isPlaying = false;
 
+        // Hide VideoView so the WPF overlay is not obscured by the native video window
+        VideoView.Visibility = Visibility.Collapsed;
+
         TxtInValue.Text = "";
         TxtOutValue.Text = "";
         InOutOverlay.Visibility = Visibility.Visible;
@@ -385,6 +388,7 @@ public partial class MainWindow : Window
         }
 
         InOutOverlay.Visibility = Visibility.Collapsed;
+        VideoView.Visibility = Visibility.Visible;
 
         WriteAnnotation(inValue, outValue);
 
@@ -405,6 +409,7 @@ public partial class MainWindow : Window
     private void InOutCancel_Click(object sender, RoutedEventArgs e)
     {
         InOutOverlay.Visibility = Visibility.Collapsed;
+        VideoView.Visibility = Visibility.Visible;
         time2 = null;
         LblTime2.Text = "--:--:--";
 
