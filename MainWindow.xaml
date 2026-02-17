@@ -297,6 +297,7 @@
                     <Button x:Name="BtnSpeed2" Content="2x" Style="{StaticResource SpeedButton}" Click="Speed2_Click"/>
                     <Button x:Name="BtnSpeed3" Content="3x" Style="{StaticResource SpeedButton}" Click="Speed3_Click"/>
                     <Button x:Name="BtnSpeed4" Content="4x" Style="{StaticResource SpeedButton}" Click="Speed4_Click"/>
+                    <Button x:Name="BtnSpeed8" Content="8x" Style="{StaticResource SpeedButton}" Click="Speed8_Click"/>
                 </StackPanel>
 
                 <!-- Current position -->

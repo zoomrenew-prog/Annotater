@@ -452,6 +452,7 @@ public partial class MainWindow : Window
     private void Speed2_Click(object sender, RoutedEventArgs e) => SetSpeed(2);
     private void Speed3_Click(object sender, RoutedEventArgs e) => SetSpeed(3);
     private void Speed4_Click(object sender, RoutedEventArgs e) => SetSpeed(4);
+    private void Speed8_Click(object sender, RoutedEventArgs e) => SetSpeed(8);
 
     private void SetSpeed(int speed)
     {
@@ -464,6 +465,7 @@ public partial class MainWindow : Window
         BtnSpeed2.Style = speed == 2 ? activeStyle : normalStyle;
         BtnSpeed3.Style = speed == 3 ? activeStyle : normalStyle;
         BtnSpeed4.Style = speed == 4 ? activeStyle : normalStyle;
+        BtnSpeed8.Style = speed == 8 ? activeStyle : normalStyle;
     }
 
     // ── File list interaction ──────────────────────────────────────
@@ -534,6 +536,11 @@ public partial class MainWindow : Window
             case Key.D4:
             case Key.NumPad4:
                 SetSpeed(4);
+                e.Handled = true;
+                break;
+            case Key.D8:
+            case Key.NumPad8:
+                SetSpeed(8);
                 e.Handled = true;
                 break;
             case Key.Space:
